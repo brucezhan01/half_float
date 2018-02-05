@@ -1176,6 +1176,8 @@ namespace half_float
 		half operator--(int) { half out(*this); --*this; return out; }
         
         unsigned short get_binary() { return (unsigned short)data_; }
+        
+        static half from_binary(unsigned short bits) { return half(detail::binary_t(), (detail::uint16)bits); }
 	
 	private:
 		/// Rounding mode to use
@@ -1183,7 +1185,7 @@ namespace half_float
 
 		/// Constructor.
 		/// \param bits binary representation to set half to
-		HALF_CONSTEXPR half(detail::binary_t, detail::uint16 bits) HALF_NOEXCEPT : data_(bits) {}
+		HALF_CONSTEXPR half(detail::binary_t, detail::uint16 bits) HALF_NOEXCEPT : data_(bits) {printf("data_=0x%08x\n", data_);}
 
 		/// Internal binary representation
 		detail::uint16 data_;

@@ -26,7 +26,7 @@ int main()
         hb[i] = half_cast<half, std::round_to_nearest>(b[i]);
         hc[i] = ha[i]*hb[i];
         
-        printf("%d:diff=%.8f, a=%.8f, b=%.8f, c=%.8f, ha=%.8f, hb=%.8f, hc=%.8f, hc_bin=0x%08x\n", i,fabs(c[i]-hc[i]),a[i],b[i],c[i],ha[i],hb[i],hc[i],hc[i].get_binary());
+        printf("%d:diff=%.8f, a=%.8f, b=%.8f, c=%.8f, ha=%.8f, hb=%.8f, hc=%.8f, hc_bin=0x%08x, hc_bin_hfloat=%.8f\n", i,fabs(c[i]-(float)hc[i]),a[i],b[i],c[i],(float)ha[i],(float)hb[i],(float)hc[i],hc[i].get_binary(),(float)half::from_binary(hc[i].get_binary()));
     }
     
     return 0;
