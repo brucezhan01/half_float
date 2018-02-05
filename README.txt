@@ -1,5 +1,5 @@
 half.cpp came from: http://half.sourceforge.net/
-cpfp.hpp came from: https://github.com/dicecco1/fpga_caffe
+cpfp.hpp came from: https://github.com/dicecco1/fpga_cpfp
 
 Just create a playground here...
 
