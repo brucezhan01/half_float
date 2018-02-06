@@ -68,8 +68,8 @@ int main()
         }
     }
     
-    printf("(half impl) Total %d count which error is bigger than %.8f\n", bigerr_cnt, min_error);
-    printf("(cpfp impl) Total %d count which error is bigger than %.8f\n", bigerr1_cnt, min_error);
+    printf("(half impl) Total %ld count which error is bigger than %.8f\n", bigerr_cnt, min_error);
+    printf("(cpfp impl) Total %ld count which error is bigger than %.8f\n", bigerr1_cnt, min_error);
     
     return 0;
 }
